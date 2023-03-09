@@ -11,8 +11,6 @@ const octokit = new Octokit({
   auth: token(),
 });
 
-//const issues = await loadIssues();
-
 function App() {
   const [issues, setIssues] = useState([]);
 
@@ -77,17 +75,19 @@ function App() {
           <div key={issue.id}>
             <ul className="list-group list-group-flush">
               <li className="list-group-item list-group-item-action border flex-wrap">
-                <div className="d-flex flex-row justify-content-between">
+                <div className="d-flex justify-content-between">
                   <div>
-                    <RxRadiobutton
-                      style={{
-                        fontSize: "1.25em",
-                        marginRight: "0.25em",
-                        marginBottom: "0.25em",
-                      }}
-                    />
-                    <div>
+                    <div className="d-flex flex-row">
+                      <RxRadiobutton
+                        style={{
+                          fontSize: "1.25em",
+                          marginRight: "0.25em",
+                          marginBottom: "0.25em",
+                        }}
+                      />
                       <h5>{issue.title}</h5>
+                    </div>
+                    <div>
                       <Labels issue={issue} />
                       <p>
                         #{issue.id} opened on {issue.created_at} by{" "}
