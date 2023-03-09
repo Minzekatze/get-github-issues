@@ -71,7 +71,7 @@ function App() {
             <li>Sort</li>
           </ul>
         </div>
-        {issues.map((issue) => (
+        {issues?.map((issue) => (
           <div key={issue.id}>
             <ul className="list-group list-group-flush">
               <li className="list-group-item list-group-item-action border flex-wrap">
