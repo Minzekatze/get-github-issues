@@ -24,7 +24,7 @@ function App() {
             repo: "create-react-app",
             per_page: 100,
             state: "open",
-            since: "2023-02-15T00:00:01Z",
+            since: "2023-03-15T00:00:01Z",
           }
         );
         console.log(
@@ -33,7 +33,7 @@ function App() {
         return result;
       } catch (error) {
         console.log(
-          `Error! Status: ${error.status}. Rate limit remaining: ${error.headers["x-ratelimit-remaining"]}. Message: ${error.response.data.message}`
+          `Error! Status: ${error.status}. Rate limit remaining: ${error.response.headers["x-ratelimit-remaining"]}. Message: ${error.response.data.message}`
         );
       }
     }
@@ -42,7 +42,9 @@ function App() {
       // setIssues();
       setIssues(myData.data);
     }
-    waitLoadIssues();
+    waitLoadIssues().catch((error) => {
+      console.log(error);
+    });
   }, []);
 
   console.log(issues);

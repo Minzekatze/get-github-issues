@@ -6,7 +6,6 @@
 .pnp.js
 
 # credentials
-/src/Token.js
 
 # testing
 /coverage
