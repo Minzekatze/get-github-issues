@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/get-github-issues/static/css/main.fdf7ea0d.css",
+    "main.js": "/get-github-issues/static/js/main.5bbfc0ad.js",
+    "index.html": "/get-github-issues/index.html",
+    "main.fdf7ea0d.css.map": "/get-github-issues/static/css/main.fdf7ea0d.css.map",
+    "main.5bbfc0ad.js.map": "/get-github-issues/static/js/main.5bbfc0ad.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fdf7ea0d.css",
+    "static/js/main.5bbfc0ad.js"
+  ]
+}
