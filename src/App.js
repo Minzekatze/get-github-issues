@@ -3,12 +3,11 @@ import { Octokit } from "octokit";
 import { RxRadiobutton } from "react-icons/rx";
 import Labels from "./Labels";
 import Comments from "./Comments";
-import token from "./Token";
 
 // Octokit.js
 // https://github.com/octokit/core.js#readme
 const octokit = new Octokit({
-  auth: token(),
+  auth: process.env.GITHUB_TOKEN,
 });
 
 function App() {
